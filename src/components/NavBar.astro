@@ -1,34 +1,12 @@
 ---
-import ActiveLink from "./ActiveLink.astro";
+import NavLink from "./NavLink.astro";
 ---
 
 <nav
-  class="w-full h-14 flex flex-wrap items-center justify-center gap-x-6 bg-black text-white shadow-md"
+  class="w-full h-14 flex flex-wrap items-center justify-center gap-x-6 bg-[#fadfa8] bg-opacity-55 shadow-lg"
 >
-  <ActiveLink
-    class="decoration-4 hover:underline underline-offset-[6px] md:underline-offset-[17px]"
-    activeClass="underline"
-    href="/"
-  >
-    Home
-  </ActiveLink>
-  <ActiveLink
-    class="decoration-4 hover:underline underline-offset-[6px] md:underline-offset-[17px]"
-    activeClass="underline"
-    href="/experience"
-  >
-    Experience
-  </ActiveLink>
-  <ActiveLink
-    class="decoration-4 hover:underline underline-offset-[6px] md:underline-offset-[17px]"
-    activeClass="underline"
-    href="/photography"
-  >
-    Photography
-  </ActiveLink>
-  <div
-    class="decoration-4 hover:underline underline-offset-[6px] md:underline-offset-[17px]"
-  >
-    <a href="https://github.com/devnote-dev">GitHub</a>
-  </div>
+  <NavLink name="About" url="/" />
+  <NavLink name="Experience" url="/experience" />
+  <NavLink name="Photography" url="/photograpghy" />
+  <NavLink name="GitHub" url="https://github.com/devnote-dev" />
 </nav>

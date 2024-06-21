@@ -1,0 +1,21 @@
+---
+interface Props {
+  name: string;
+  url: string;
+}
+
+const { name, url } = Astro.props;
+const { pathname } = Astro.url;
+const isActive = url == pathname || url == pathname.replace(/\/$/, "");
+const underline = isActive ? "underline" : "hover:underline";
+const href = isActive ? "#" : url;
+---
+
+<div
+  class:list={[
+    "decoration-4 text-black opacity-55 hover:opacity-80 underline-offset-[6px] md:underline-offset-[17px] transition duration-200 ease-in-out",
+    underline,
+  ]}
+>
+  <a href={href}>{name}</a>
+</div>
